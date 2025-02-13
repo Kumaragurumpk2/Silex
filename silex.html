@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silex India | Wireless Connectivity Solutions</title>
+  <style>
+    /* Reset & Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    
+    /* Header & Navigation */
+    header { background: #004c97; color: #fff; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .logo { font-size: 1.8em; font-weight: bold; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav-links { list-style: none; display: flex; }
+    .nav-links li { margin: 0 15px; position: relative; }
+    .nav-links li a { color: #fff; font-size: 1em; padding: 8px 0; display: block; }
+    
+    /* Mega Menu */
+    .mega-menu { position: absolute; left: 0; top: 100%; background: #fff; color: #333; width: 600px; display: none; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .nav-links li:hover .mega-menu { display: block; }
+    .mega-menu h3 { margin-bottom: 10px; color: #004c97; }
+    .mega-menu ul { list-style: none; display: flex; flex-wrap: wrap; }
+    .mega-menu ul li { width: 45%; margin: 5px 5%; }
+    
+    /* Hero Section */
+    .hero { background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover; height: 400px; position: relative; color: #fff; display: flex; align-items: center; }
+    .hero::after { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); }
+    .hero-content { position: relative; z-index: 2; text-align: center; width: 100%; }
+    .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .hero p { font-size: 1.2em; }
+    
+    /* Section Styles */
+    section { padding: 60px 20px; }
+    section:nth-of-type(even) { background: #f4f4f4; }
+    .section-title { text-align: center; margin-bottom: 40px; font-size: 2em; color: #004c97; }
+    
+    /* About Section */
+    .about { max-width: 800px; margin: 0 auto; text-align: center; }
+    .about p { margin-bottom: 20px; }
+    
+    /* Products Grid */
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .product { background: #fff; padding: 20px; border: 1px solid #ddd; text-align: center; }
+    .product h4 { margin-bottom: 10px; color: #004c97; }
+    
+    /* Services Grid */
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .service { background: #fff; padding: 20px; border: 1px solid #ddd; text-align: center; }
+    .service h4 { margin-bottom: 10px; color: #004c97; }
+    
+    /* News Section */
+    .news { max-width: 800px; margin: 0 auto; }
+    .news-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ddd; }
+    .news-item h4 { color: #004c97; margin-bottom: 5px; }
+    .news-item p { font-size: 0.9em; }
+    
+    /* Contact Section */
+    .contact { max-width: 600px; margin: 0 auto; }
+    .contact-info { margin-bottom: 20px; }
+    .contact-info h4 { color: #004c97; margin-bottom: 5px; }
+    .contact-info p { margin-bottom: 10px; }
+    
+    /* Footer */
+    footer { background: #333; color: #fff; text-align: center; padding: 20px; }
+    footer p { font-size: 0.9em; }
+    
+    /* Responsive Mobile Menu */
+    .menu-toggle { display: none; cursor: pointer; }
+    @media (max-width: 768px) {
+      nav { flex-wrap: wrap; }
+      .nav-links { flex-direction: column; width: 100%; display: none; }
+      .nav-links li { margin: 10px 0; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Silex India</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li>
+            <a href="#products">Products</a>
+            <!-- Mega Menu -->
+            <div class="mega-menu">
+              <h3>Our Products</h3>
+              <ul>
+                <li><a href="#">SDIOWorx ™</a></li>
+                <li><a href="#">WiFi Software Suite</a></li>
+                <li><a href="#">WiSe-Supplicant</a></li>
+                <li><a href="#">WiSe-Zeroconf</a></li>
+                <li><a href="#">Embedded WiFi Module</a></li>
+                <li><a href="#">IoT Connectivity</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Empowering Wireless Connectivity</h1>
+      <p>Transforming your products into secure, reliable wireless devices for a completely connected, always-on experience.</p>
+    </div>
+  </section>
+  
+  <!-- About Us Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="about">
+        <p>Silex Technology India Private Limited (formerly embWiSe Technologies Pvt. Ltd.) is dedicated to delivering highly reliable and secure wireless connectivity solutions for medical, industrial, and commercial customers.</p>
+        <p>Our expertise spans from embedded WiFi modules to comprehensive software engineering services, empowering OEM customers worldwide with robust Wi-Fi implementations.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Products Section -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Products</h2>
+      <div class="products">
+        <div class="product">
+          <h4>SDIOWorx ™</h4>
+          <p>Innovative Wi-Fi driver and software suite for embedded solutions.</p>
+        </div>
+        <div class="product">
+          <h4>WiFi Software Suite</h4>
+          <p>Comprehensive tools for reliable wireless connectivity.</p>
+        </div>
+        <div class="product">
+          <h4>WiSe-Supplicant</h4>
+          <p>Secure supplicant software ensuring seamless network access.</p>
+        </div>
+        <div class="product">
+          <h4>WiSe-Zeroconf</h4>
+          <p>Effortless network configuration without manual setup.</p>
+        </div>
+        <div class="product">
+          <h4>Embedded WiFi Module</h4>
+          <p>High-performance modules powering IoT and industrial applications.</p>
+        </div>
+        <div class="product">
+          <h4>IoT Connectivity</h4>
+          <p>Tailored wireless solutions to empower your IoT devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="services">
+        <div class="service">
+          <h4>WLAN Driver Development</h4>
+          <p>Expert development and platform porting of WLAN drivers for embedded systems.</p>
+        </div>
+        <div class="service">
+          <h4>Platform Integration</h4>
+          <p>End-to-end support integrating wireless connectivity into your products.</p>
+        </div>
+        <div class="service">
+          <h4>Board Support Packages</h4>
+          <p>Custom solutions to streamline hardware development and deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- News Section -->
+  <section id="news">
+    <div class="container">
+      <h2 class="section-title">News & Events</h2>
+      <div class="news">
+        <div class="news-item">
+          <h4>Acquisition Announcement</h4>
+          <p>Silex Technology, Inc. Acquires embWiSe Technologies Pvt. Ltd., expanding our global engineering footprint and enhancing our Wi-Fi solutions for OEM customers.</p>
+        </div>
+        <div class="news-item">
+          <h4>New WLAN Driver Release</h4>
+          <p>Our latest release supports Windows Embedded Compact 2013 with advanced chipset compatibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact">
+        <div class="contact-info">
+          <h4>Head Office</h4>
+          <p>Meridian House, IV Floor, No.121/3, Manickam Avenue,<br>T.T. K Road, Alwarpet, Chennai - 600018, India</p>
+        </div>
+        <div class="contact-info">
+          <h4>Phone</h4>
+          <p>+91 44 430 33234</p>
+        </div>
+        <div class="contact-info">
+          <h4>Email</h4>
+          <p><a href="mailto:info@silex-india.com">info@silex-india.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Silex Technology India Private Limited. All Rights Reserved.</p>
+      <p>
+        <a href="#" style="color: #fff; margin: 0 5px;">Facebook</a> |
+        <a href="#" style="color: #fff; margin: 0 5px;">LinkedIn</a> |
+        <a href="#" style="color: #fff; margin: 0 5px;">Twitter</a>
+      </p>
+    </div>
+  </footer>
+  
+  <script>
+    // Mobile menu toggle function
+    function toggleMenu() {
+      var nav = document.getElementById('navLinks');
+      if (nav.style.display === "flex") {
+        nav.style.display = "none";
+      } else {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+      }
+    }
+  </script>
+</body>
+</html>
